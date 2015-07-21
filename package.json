@@ -1,0 +1,26 @@
+{
+  "name": "format-number-with-string",
+  "version": "0.0.1",
+  "description": "Format a number based on a format string '-£#,##0.##0'",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DeeLindesay/format-number-with-string.git"
+  },
+  "keywords": [
+    "number",
+    "format"
+  ],
+  "author": "DeeLindesay",
+  "license": "MIT",
+  "dependencies": {
+    "deconstruct-number-format": "~0.0.1",
+    "format-number": "^1.0.2"
+  },
+  "devDependencies": {
+    "testit": "~1.2.0"
+  }
+}
