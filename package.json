@@ -12,7 +12,8 @@
   },
   "keywords": [
     "number",
-    "format"
+    "format",
+    "format-string"
   ],
   "author": "DeeLindesay",
   "license": "MIT",
