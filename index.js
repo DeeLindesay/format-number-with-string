@@ -3,15 +3,13 @@
 var deconstructNumberFormat = require('deconstruct-number-format');
 var formatFactory = require('format-number');
 
-exports = module.exports = function formatNumberWithString(value, requiredFormat, includeUnits, separate) {
+exports = module.exports = function formatNumberWithString(value, requiredFormat, overrideOptions) {
 
-  includeUnits = includeUnits === false ? false : true;
-  separate = separate === false ? false : true;
-  
   var deconstructedFormat = []
 
   if (requiredFormat) deconstructedFormat = deconstructNumberFormat(requiredFormat.trim());
   
+  value = (value === null ? '' : value);
   value = value + ''; //make a string
   value = value.length ? value.trim() : '';
   
@@ -34,6 +32,6 @@ exports = module.exports = function formatNumberWithString(value, requiredFormat
     truncate: null
   })
 
-  return format(value, includeUnits, separate);
+  return format(value, overrideOptions);
 
 };

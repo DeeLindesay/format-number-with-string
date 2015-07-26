@@ -21,7 +21,10 @@ If the format string is undefined or an empty string then defaults are used (see
 ```
 var format = require('format-number-with-string');
 
-var output = format(3345.23, '-£#,###,###.00');
+
+var output1 = format(3345.23, '-£#,###,###.00');
+var output2 = format(3345.23, '-£#,###,###.00', overrideOptions);
+
 ```
 ## Format Notes and Examples
 
@@ -67,6 +70,13 @@ Prefix text cannot contain number placeholder characters
 `'-233278', '($# ###.### # per year)'` returns '($233 278 per year)'
 `'-233278', '$# ##0.00# #- per year'` returns '$233 278- per year';
 `'-456.23', '-$# ##0.00# # per year'` returns '-$456.23 per year';
+
+## Override Options
+
+As used in format-number
+- `noUnits` boolean: if true will override and leave out prefix and suffix; default= false
+- `noSeparator` - boolean: if true will override both integer and decimals separator and leave them out
+
 
 ## Does not work for:
 - structured reference numbers, eg 9999-9999

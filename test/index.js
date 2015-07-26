@@ -77,7 +77,7 @@ test('prefix and suffix', function () {
   assert.deepEqual(actual, expected);
 });
 test('prefix and suffix with not includeUnits', function () {
-  var actual = format('56.23', '-£##.## /year', false);
+  var actual = format('56.23', '-£##.## /year', {noUnits:true});
   var expected = '56.23';
   assert.deepEqual(actual, expected);
 });
@@ -154,6 +154,10 @@ test('comma as decimal, . as separator', function () {
   var expected = '$(23.342.456,234.327.8) per year';
   assert.deepEqual(actual, expected);
 });
-
+test('comma as decimal, . as separator with override or no separator and no units', function () {
+  var actual = format('-23342456.2343278', '$(#.###,###.#) per year', {noUnits: true, noSeparator: true});
+  var expected = '(23342456,2343278)';
+  assert.deepEqual(actual, expected);
+});
 
 

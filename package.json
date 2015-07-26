@@ -19,7 +19,7 @@
   "license": "MIT",
   "dependencies": {
     "deconstruct-number-format": "~0.0.1",
-    "format-number": "^1.0.2"
+    "format-number": "^2.0.0"
   },
   "devDependencies": {
     "testit": "~1.2.0"
