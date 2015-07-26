@@ -20,7 +20,7 @@ If the format string is undefined or an empty string then defaults are used (see
 
 ```
 var format = require('format-number-with-string');
-
+var overrideOptions = {noUnits: true, noSeparator: true};
 
 var output1 = format(3345.23, '-£#,###,###.00');
 var output2 = format(3345.23, '-£#,###,###.00', overrideOptions);
