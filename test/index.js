@@ -137,6 +137,26 @@ test('rounding', function () {
   var expected = '355.23';
   assert.deepEqual(actual, expected);
 });
+test('rounding', function () {
+  var actual = format('512.996', '###.00');
+  var expected = '513.00';
+  assert.deepEqual(actual, expected);
+});
+test('rounding ZerosAfterDB', function () {
+  var actual = format('0.00000447343434434', '#.######0');
+  var expected = '0.0000045';
+  assert.deepEqual(actual, expected);
+});
+test('rounding decimal to integer', function () {
+  var actual = format('0.99', '#.0');
+  var expected = '1.0';
+  assert.deepEqual(actual, expected);
+});
+test('rounding decimal', function () {
+  var actual = format('0.099', '#.#0');
+  var expected = '0.10';
+  assert.deepEqual(actual, expected);
+});
 
 //decimal and separators
 test('spaces as sep, comma as decimal', function () {
