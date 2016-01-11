@@ -1,6 +1,6 @@
 {
   "name": "format-number-with-string",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Format a number based on a format string '-£#,##0.##0'",
   "main": "index.js",
   "scripts": {
